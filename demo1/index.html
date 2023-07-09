@@ -134,7 +134,7 @@
                             py-3
                             rounded-lg
                         ">
-                    Checkoutn
+                    Checkout
                 </button>
                 <!-- ppay checkout -->
                 <div id="klump__checkout"></div>
@@ -185,7 +185,7 @@
             data: {
                 amount: 29000,
                 currency: 'NGN',
-                redirect_url: "",
+                redirect_url: "/success.html",
                 merchant_reference: "",
                 customer_data: {
                     name: "Ore Faseru",
@@ -229,48 +229,11 @@
             }
         }
 
-        const payload2 = {
-            publicKey: 'prm_pubk_test_181b237c3f2e49e7b1f732ddd0b5c1a6',
-            data: {
-
-            },
-            onSuccess: (data) => {
-                console.log('html onSuccess will be handled by the merchant');
-                console.log(data);
-                ok = data;
-                return data;
-            },
-            onError: (data) => {
-                console.log('html onError will be handled by the merchant');
-                console.log(data);
-            },
-            onLoad: (data) => {
-                console.log('html onLoad will be handled by the merchant');
-                console.log(data);
-            },
-            onOpen: (data) => {
-                console.log('html OnOpen will be handled by the merchant');
-                console.log(data);
-            },
-            onClose: (data) => {
-                console.log('html onClose will be handled by the merchant');
-                console.log(data);
-            }
-        }
 
         document.getElementById('klump__checkout').addEventListener('click', function () {
             const klump = new Klump(payload);
         });
 
-        // document.getElementById('ln-btn').addEventListener('click', function () {
-        //     const ppay = new Ppay_Loan(payload2);
-
-        // })
-
-        // document.getElementById('ppay__checkout').addEventListener('click', function () {
-        //     const ppay = new Ppay(payload);
-
-        // })
 
         const cartButton = document.getElementById('cart');
         const productCheckout = document.getElementById('product-checkout');
