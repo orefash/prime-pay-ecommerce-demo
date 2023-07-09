@@ -181,12 +181,12 @@
     </div>
     <script>
         const payload = {
-            publicKey: 'prm_pubk_test_181b237c3f2e49e7b1f732ddd0b5c1a6',
+            publicKey: 'prm_pubk_test_c01521fd9ad94ed7b89636ad11a5d731',
             data: {
-                amount: 60000,
+                amount: 29000,
                 currency: 'NGN',
-                redirect_url: "URL",
-                merchant_reference: "MR",
+                redirect_url: "",
+                merchant_reference: "",
                 customer_data: {
                     name: "Ore Faseru",
                     email: "user@mail.com",
@@ -195,14 +195,14 @@
                 items: [
                     {
                         name: 'Awesome item',
-                        unit_price: 4000,
+                        unit_price: 29000,
                         quantity: 1,
                     },
-                    {
-                        name: 'Item 2',
-                        unit_price: 10000,
-                        quantity: 2,
-                    }
+                    // {
+                    //     name: 'Item 2',
+                    //     unit_price: 10000,
+                    //     quantity: 2,
+                    // }
                 ]
             },
             onSuccess: (data) => {
